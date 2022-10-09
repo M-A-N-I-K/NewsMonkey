@@ -10,6 +10,7 @@ import Navbar from "./Components/Navbar";
 import News from "./Components/News";
 
 export default class App extends Component {
+	pagesize = 10;
 	render() {
 		return (
 			<div>
@@ -18,23 +19,23 @@ export default class App extends Component {
 					<Navbar />
 					<Routes>
 						<Route exact path="/"
-							element={<News key="general" pageSize={10} country="in" category='general' />} />
+							element={<News key="general" pageSize={this.pagesize} country="in" category='general' />} />
 						<Route exact path="/Business"
-							element={<News key="business" pageSize={10} country="in" category='business' />} />
+							element={<News key="business" pageSize={this.pagesize} country="in" category='business' />} />
 						<Route exact path="/Sports"
-							element={<News key="sports" pageSize={10} country="in" category='sports' />} />
+							element={<News key="sports" pageSize={this.pagesize} country="in" category='sports' />} />
 						<Route exact path="/Technology"
-							element={<News key="technology" pageSize={10} country="in" category='technology' />} />
+							element={<News key="technology" pageSize={this.pagesize} country="in" category='technology' />} />
 						<Route exact path="/Health"
-							element={<News key="health" pageSize={10} country="in" category='health' />} />
+							element={<News key="health" pageSize={this.pagesize} country="in" category='health' />} />
 						<Route exact path="/Science"
-							element={<News key="science" pageSize={10} country="in" category='science' />}
+							element={<News key="science" pageSize={this.pagesize} country="in" category='science' />}
 						/>
 						<Route exact path="/Entertainment"
-							element={<News key="entertainment" pageSize={10} country="in" category='entertainment' />}
+							element={<News key="entertainment" pageSize={this.pagesize} country="in" category='entertainment' />}
 						/>
 						<Route exact path="/General"
-							element={<News key="general" pageSize={10} country="in" category='general' />}
+							element={<News key="general" pageSize={this.pagesize} country="in" category='general' />}
 						/>
 					</Routes>
 				</Router>
